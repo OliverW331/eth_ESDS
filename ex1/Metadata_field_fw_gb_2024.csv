@@ -1,0 +1,31 @@
+﻿Filter ID (e.g. SPY221234),Country,Sampling Start Time,Sampling duration [min],Sample type,Sampling device,Filter pore size [µm],Total volume filtered [L],Preservation,Sampling depth [m],ID Number,Replicate,Single use tubing used?,GPS Latitude,GPS Longitude,Location name,Rain occurrence before sampling,Habitat,Temperature (kelvin),Weather,River width [m],River depth [m]
+DAR-2024-0205,GA,2024-04-11 16:25,60,FRESHWATER,PERISTALTIC,"0,45",30,LONGMIRE,0,,1,true,"-0,687088","10,231636",Oggoue Palace,Yes,"large river, +50 m near the city of lambarene",307.45,<p>sunny and warm</p>,80,6
+DAR-2024-0206,GA,2024-04-11 16:25,60,freswater,PERISTALTIC,"0,45",30,LONGMIRE,0,,2,true,"-0,687088","10,231636",Oggoue Palace,Yes,"large river, +50 m near the city of lambarene",307.45,<p>sunny and warm</p>,80,6
+DAR-2024-0216,GA,2024-04-12 10:30,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,87048","9,735542",Achouka,Yes,"large river, +50 m",301.15,<p>sunny and warm</p>,100,2.3
+DAR-2024-0215,GA,2024-04-12 10:30,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,87048","9,735542",Achouka,Yes,"large river, +50 m",301.15,<p>sunny and warm</p>,100,2.3
+DAR-2024-0229,GA,2024-04-12 12:12,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,84088","9,87716",Nyondji,Yes,"large river, +50 m",303.15,<p>sunny and warm</p>,150,5.6
+DAR-2024-0228,GA,2024-04-12 12:12,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,84088","9,87716",Nyondji,Yes,"large river, +50 m",303.15,<p>sunny and warm</p>,150,5.6
+DAR-2024-0231,GA,2024-04-12 14:16,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-1,071666","9,996221",Bingovion,Yes,"large river, +50 m",306.15,<p>rainy and warm</p>,70,3.5
+DAR-2024-0230,GA,2024-04-12 14:16,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-1,071666","9,996221",Bingovion,Yes,"large river, +50 m",306.15,<p>rainy and warm</p>,70,3.5
+DAR-2024-0217,GA,2024-04-12 16:00,45,freswater,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,838203","10,175357",Ompomona,Yes,"large river, +50 m",307.35,<p>rainy and warm</p>,200,5.4
+DAR-2024-0218,GA,2024-04-12 16:00,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,838203","10,175357",Ompomona,Yes,"large river, +50 m",307.35,<p>rainy and warm</p>,200,5.4
+DAR-2024-0213,GA,2024-04-12 12:42,30,freswater,PERISTALTIC,"0,45",20,LONGMIRE,0,,1,true,"-2,125219","11,247436",Lebomba,Yes,"large river, +50 m",302.65,<p>sunny and warm</p>,50,
+DAR-2024-0214,GA,2024-04-12 13:32,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,2,true,"-2,125531","11,247393",Lebomba,Yes,"large river, +50 m",304.15,<p>sunny and warm</p>,50,
+DAR-2024-0211,GA,2024-04-12 15:48,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,1,true,"-1,523288","11,03275",Mouila,Yes,"large river, +50 m",304.85,<p>sunny and warm</p>,100,
+DAR-2024-0212,GA,2024-04-12 16:25,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,2,true,"-1,523288","11,03275",Mouila,Yes,"large river, +50 m",305.15,<p>sunny and warm</p>,100,
+DAR-2024-0236,GA,2024-04-13 10:47,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,447714","10,428454",Makouke,Yes,large river,300.15,<p>rainy and warm</p>,200,
+DAR-2024-0237,GA,2024-04-13 10:47,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,447714","10,428454",Makouke,Yes,large river,300.15,<p>rainy and warm</p>,200,
+DAR-2024-0238,GA,2024-04-13 12:40,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,556878","10,304335",USINERFM,Yes,large river,303.15,<p>rainy and warm</p>,200,
+DAR-2024-0239,GA,2024-04-13 12:40,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,556878","10,304335",USINERFM,Yes,large river,303.15,<p>rainy and warm</p>,200,
+DAR-2024-0241,GA,2024-04-13 14:09,45,freswater,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,616517","10,389953",Bellevue,Yes,large river,304.55,<p>sunny and warm</p>,100,
+DAR-2024-0240,GA,2024-04-13 14:09,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,616517","10,389953",Bellevue,Yes,large river,304.55,<p>sunny and warm</p>,100,
+DAR-2024-0243,GA,2024-04-13 16:13,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,true,"-0,772434","10,190964",Ikolo,Yes,large river,305.15,<p>sunny and warm</p>,150,
+DAR-2024-0242,GA,2024-04-13 17:00,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,true,"-0,772434","10,190964",Ikolo,Yes,large river,304.65,<p>sunny and warm</p>,150,
+DAR-2024-0210,GA,2024-04-13 10:08,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,1,true,"-1,209376","10,591",Fougamou,Yes,large river,300.15,<p>sunny and warm</p>,250,6
+DAR-2024-0209,GA,2024-04-13 10:40,30,freswater,PERISTALTIC,"0,45",20,LONGMIRE,0,,2,true,"-1,209376","10,591",Fougamou,Yes,large river,300.55,<p>sunny and warm</p>,250,6
+DAR-2024-0234,GA,2024-04-13 12:45,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,1,true,"-1,0381123","10,6751151",Sindara,Yes,large river,303.15,<p>sunny and warm</p>,400,4
+DAR-2024-0235,GA,2024-04-13 13:20,30,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,2,TRUE,"-1,0381123","10,6751151",Sindara,Yes,large river,305.45,<p>sunny and warm</p>,400,4
+DAR-2024-0232,GA,2024-04-13 15:50,25,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,1,TRUE,"-0,8089626","10,49994",Maboumine,Yes,large river,306.65,<p>sunny and warm</p>,400,10
+DAR-2024-0233,GA,2024-04-13 16:18,28,FRESHWATER,PERISTALTIC,"0,45",20,LONGMIRE,0,,2,TRUE,"-0,8089626","10,49994",Maboumine,Yes,large river,306.65,<p>sunny and warm</p>,400,10
+DAR-2024-0227,GA,2024-04-14 12:17,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,1,TRUE,"0,161798370826061","10,0859641344697",Kango,Yes,large river,308.15,<p>sunny and warm</p>,1500,10
+DAR-2024-0226,GA,2024-04-14 12:17,45,FRESHWATER,PERISTALTIC,"0,45",25,LONGMIRE,0,,2,TRUE,"0,161798370826061","10,0859641344697",Kango,Yes,large river,308.15,<p>sunny and warm</p>,1500,10

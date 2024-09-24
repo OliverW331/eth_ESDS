@@ -1,0 +1,142 @@
+---
+title: "Week 2: Introduction to data and metadata"
+author: "Eliza Harris"
+date: '2022-09-27'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data types
+
+## Numeric data
+
+In R, numbers are automatically `numeric', ie. floating point.
+
+```{r numeric}
+a = 5
+class(a)
+b = 5.123
+class(b)
+```
+
+To create an integer, we use as.integer or L:
+
+
+```{r int}
+i = as.integer(5)
+class(i)
+i2 = as.integer(5.123)
+class(i2)
+i3 = 5L
+class(i3)
+```
+
+We can parse a numeric string as an integer or numeric:
+
+
+```{r parse}
+as.integer(5.123)
+as.integer("5.123")
+as.numeric("5.123")
+```
+
+Parsing a non-numeric string will give us an error:
+
+```{r strong}
+as.integer("5.s")
+as.numeric("5.s")
+```
+
+Generally, integers take up less memory than numerics. In R different data types are not represented in the same way as lower level languages like C, where you set precision and type of integers and floats. 
+
+```{r size}
+object.size(as.integer(1:1000))
+object.size(as.numeric(1:1000))
+```
+
+## Characters and strings
+
+Characters are single letters, numbers and symbols. Strings are lists of characters. R has only one data type for characters and strings; in many other languages these are separate.
+
+```{r char}
+c = "a"
+class(c)
+s = "Hello World"
+class(s)
+```
+
+Character vectors contain multiple characters.
+
+```{r charvec}
+cv = character(10)
+cv
+class(c)
+```
+
+We can add either single characters or strings to this vector.
+
+```{r charvec2}
+cv[1] = "a"
+cv[10] = "Hello World"
+cv
+```
+
+We can convert a character vector to a string:
+
+
+```{r charvec to string}
+cv = character(2)
+cv[1] = "Hello"
+cv[2] = "World"
+toString(cv)
+```
+
+toString separates with ", ". Paste allows more flexibility to choose what is between the elements:
+
+```{r charvec paste}
+paste(cv, collapse=" ")
+paste(cv, collapse="")
+```
+
+Strings can also be separated back into character vectors:
+
+```{r charvec split}
+s = paste(cv, collapse=" ")
+s
+cv_new = strsplit(s, split=" ")
+cv_new
+```
+
+## Example: Date and time
+
+Date and time is a common application we need to split and combine strings and change data types. Our date and time could be output by our instrument in any kind of format, and we might have columns like:
+
+```{r dt input}
+date = "01.01.2022"
+hours = "09"
+minutes = 54
+```
+
+Tidy R's lubridate will easily allow us to convert this to a time stamp but first we need to combine it to a single string.
+
+```{r dt convert}
+time = paste(hours,minutes,sep=":")
+time
+dt = paste(date,time,sep=" ")
+dt
+```
+
+```{r dt stamp}
+require(lubridate)
+dt_stamp = dmy_hm(dt)
+dt_stamp
+class(dt_stamp)
+```
+
+You can find the lubridate cheat sheet at https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf
+
+Be careful of time zones!
+

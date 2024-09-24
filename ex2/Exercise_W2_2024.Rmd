@@ -1,0 +1,120 @@
+---
+title: "Exercise with solutions, week 2: Introduction to data and metadata"
+author: "Dr. Camille Albouy & Dr. Eliza Harris "
+date: '2024-08-19'
+output: html_document
+---
+
+### Preparing the environment by loading the packages  
+
+```{r Packages loading, message=F}
+require(lubridate)
+require(tidyverse)
+```
+
+## CO$_2$ at South Pole Observatory
+
+In the tutorial, we imported the Mauna Loa CO$_2$ data, found annual mean values, and calculated the detrended data. Now we will look at CO$_2$ data from the South Pole Observatory. The files are:
+
+* South Pole Observatory: co2_spo_surface-insitu_2_3001-9999_daily.txt
+
+Your first task is to **import the dataset** and find the annual means, it standard deviation (sd function in R) and detrended data for this station, like we did for the MLO data in the tutorial. 
+
+*Extra task*: Some of you are already quite familiar with R or might be looking for an extra challenge. We need to import and process a new data set. However, since you'll likely need to repeat the same steps to import similar data sets in the future, it would be cleaner and more efficient to create a function that applies the same processes. Try to write a function that handles data import and calculates the annual means. We covered a simple function in the tutorial, but if you're not yet comfortable with functions, feel free to write your code without using one.
+
+```{r Import the data, tidy=T}
+# Here you should import both data sets, and find the annual means and the detrended data, like we did for the MLO data set in the tutorial.
+```
+
+Plot an overview of the data set, similar to the overview at the end of the tutorial. Try to plot SPO in different colours before 2000 and after 2000 and to add a legend to one of the plots to show which colour corresponds to which period. Search the internet to find examples of simple line and scatter plots to work out how to change the colour and add a legend.
+
+*Hint*: In the tutorial we used plot() to create a new plot and simultaneously add data. To add data to an existing plot, try lines() and points(). You can also save the plot by using the function pdf() or tiff().
+
+```{r Plot}
+# Substet the data and make a data set before 2000, you can selected the data before the date "2000-01-01 UTC" and plot the SPO data with different colours or plot styles to distinguish the two data sets
+
+```
+
+# Seasonal cycles
+
+Find and plot the mean seasonal cycle for the periods 1981-1990, 1991-2000, 2001-2010 and 2011-2020. The mean seasonal cycle can be represented with the monthly means over the chosen period. 
+
+* First, find all data for the desired period from start year to end year.
+* You could use aggregate with the month as the group to find the monthly means. An alternative would be to loop through the months.
+* Use the detrended data to find the mean seasonal cycles.
+* Using the detrended data will mean your seasonal values are deviations, e.g., the mean is close to 0, and the negative and positive values show monthly deviations from the mean. 
+
+```{r}
+# Find the mean seasonal cycle for the different periods. The mean seasonal cycle should be in the form of the mean monthly CO2 deviation.
+```
+Plot the seasonal cycles with month on the x axis and mean CO$_2$ deviation on the y axis. Use a different colour/plotting style for each period. Add a legend.
+
+```{r}
+# Plot the seasonal cycles for the 4 periods.
+```
+
+**How can you interpret this graph, first describe the trend of all the curves and then the differences between them.**
+
+Solution: The seasonal cycle in CO$_2$ is caused by biosphere uptake of CO$_2$, strongest during the spring and summer months. There seems to be a noticeable difference between the earlier decades and the most recent one, with the latest decade showing greater amplitude throughout the year.
+
+# Simulating CO$_2$ mixing ratio
+
+Find the mean trend and seasonality in CO$_2$ for 1995-2004 and use this to predict CO$_2$ mixing ratio for 2005-2014.
+
+* Make the prediction for SPO on a monthly timestep
+* Use the lm function (from the tutorial) to find the slope and intercept for CO$_2$ for 1995-2004, and use this to estimate the CO$_2$ slope from 2005-2014 (*Hint*: You cannot use lm with the timestamp but will need to convert to a decimal date, eg. 2010.12 = 31.01.2010) 
+* You still need the seasonal cycle - the linear fit is only giving you the slope - so you can add the mean monthly deviations to predict the seasonal cycle
+* Putting the prediction in a function will help to apply to both sites, for example: predictdata <- function(data,ystart,yend,ystart_predict,yend_predict), where data is the CO2 data, ystart and yend show to period to fit the model, and ystart_predict and yend_predict show the period to predict.
+
+
+```{r}
+# Try to predict CO2 based on the trend and the mean seasonal cycle. 
+predictdata <- function(data,ystart,yend,ystart_predict,yend_predict) {
+  # Use function to find seasonal cycle
+  seasonal <- seasonalcycle(data,ystart,yend)
+  
+  # Find trend
+  
+  # Predict results on a monthly timestep
+}
+
+# Use the function and save the `predict' dataframe into our list
+```
+
+As we have seen in the previous graph we have some missing data at the beginning of the time series, apply your function to the period 1970-1985, and use this to estimate the CO$_2$ slope from 1970-1985.
+```{r}
+# apply your function to another period
+```
+
+Compare to the actual data for 2005-2014: What is the root mean squared error? Which site can we predict better? What causes the predictions to deviate from the observations?
+
+*Hints:*
+
+* The predictions are on monthly time steps and the data is not...
+* To compare directly you'll need to interpolate the predictions to the time points of the real data
+* Use the approx() function to interpolate the predictions to the timestamps of the real data
+* Use decimal timestamps for approx()
+
+```{r}
+# Interpolate to the measurement points for direct comparison
+# The approx function allows us to interpolate y values between an initial and an interpolated set of x values; we provide approx(x_in,y_in,x_out,method)
+# Plot both of the timeseries
+
+# Find the RMSE to compare results
+rmse <- function(data1,data2){sqrt(mean((data1 - data2)^2,na.rm=TRUE))}
+
+```
+
+We can see that our predictions deviate from the observations. Our model in dark blue tends to underestimate the observations, whereas our model in red tends to overestimate them. Although our prediction is not perfect, this simple method reproduces the overall trend and seasonality. We can conclude that this method could be used to fill gaps in data and make short-term predictions.
+
+# Summary
+
+In this exercise you have learnt:
+
+* Using functions to handle repetitive tasks
+* Using lists to group data
+* Using the approx function for interpolation
+* Creating a simple model for gap-filling and short predictions
+* Plotting in base R
+
+There are a lot of ways to solve this problem. I chose a relatively easy way to illustrate simple R tools.
